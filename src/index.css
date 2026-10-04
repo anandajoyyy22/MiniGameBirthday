@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+    height: -webkit-fill-available;
+  }
+
+  body {
+    background: #1f0207;
+    color: #1e293b;
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Force Apple Color Emoji font fallback for emoji text */
+  .apple-emoji {
+    font-family: 'Apple Color Emoji', -apple-system, BlinkMacSystemFont, 'Segoe UI Emoji', sans-serif;
+  }
+}
+
+/* Elegant Glassmorphism & Luxury Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(184, 20, 54, 0.14);
+  box-shadow: 0 15px 35px -10px rgba(153, 0, 36, 0.09), 0 0 1px rgba(184, 20, 54, 0.12);
+}
+
+.glass-card-maroon {
+  background: linear-gradient(135deg, rgba(153, 0, 36, 0.96) 0%, rgba(128, 0, 31, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(243, 199, 102, 0.35);
+  box-shadow: 0 20px 45px -10px rgba(77, 0, 16, 0.45), 0 0 20px rgba(212, 175, 55, 0.18);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -10px rgba(153, 0, 36, 0.16), 0 0 15px rgba(243, 199, 102, 0.18);
+  border-color: rgba(184, 20, 54, 0.3);
+}
+
+/* Custom Text Gradients */
+.text-gradient-maroon {
+  background: linear-gradient(135deg, #990024 0%, #cb1a48 45%, #80001f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #d4af37 0%, #f3c766 50%, #c59b27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-rose {
+  background: linear-gradient(135deg, #990024 0%, #cb1a48 50%, #d4a544 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes pulseGlowSoft {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.02); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlowSoft 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar - Vibrant Red-Maroon */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fef2f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cb1a48;
+  border-radius: 9999px;
+  border: 1.5px solid #fef2f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #990024;
+}
